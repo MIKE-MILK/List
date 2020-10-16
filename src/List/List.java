@@ -111,19 +111,24 @@ public class  List<E>implements Iterable<E>,Comparable<E>{
     }
     //进行sort的操作
     public void sort(){
-//        int length=size();
-//        List<Objects>list=new List();
-//        //采用冒泡排序进行排序
-//        for (int i=0;i<length;i++){
-//            for (int j=0;j<length;j++){
-//                if (node(j).e>node(j+1)){
-//                    Node temp=node(j);
-//                    Object o=temp.e;
-//                    node(j).e=node(j+1).e;
-//                    node(j+1).e=o;
-//                }
-//            }
-//        }
+        int length=size();
+        //采用冒泡排序进行排序
+        for (int i=0;i<length;i++){
+            for (int j=0;j<length;j++){
+                if (node(j+1)!=null){
+                    int n=(int)node(j).e;
+                    int z=(int)node(j+1).e;
+                    if (n>z){
+                        Node temp=node(j);
+                        Node temp1=node(j+1);
+                        Object o=temp.e;
+                        Object x=temp1.e;
+                        node(j).e=node(j+1).e;
+                        node(j+1).e=o;
+                    }
+                }
+            }
+        }
     }
     //get操作
     public  Object get(int index){

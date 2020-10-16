@@ -8,7 +8,7 @@ public class Test {
         List<Integer>list=new List();
         list.add(2);
         list.add(1);
-        list.clear();
+        list.sort();
         Iterator<Integer>it=list.iterator();
         while (it.hasNext()){
             System.out.println(it.next());
