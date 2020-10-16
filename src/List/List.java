@@ -109,7 +109,7 @@ public class  List<E>implements Iterable<E>,Comparable<E>{
         Node temp=node(index);
         temp.e=e;
     }
-    //进行sort的操作
+    //进行sort的操作 交换节点的数据，但只能进行int的交换
     public void sort(){
         int length=size();
         //采用冒泡排序进行排序
