@@ -98,7 +98,12 @@ public class  List<E>implements Iterable<E>,Comparable<E>{
         size--;
     }
     //进行clear的操作
-//    public E clear(){}
+    public void clear(){
+        Pre = new Node(null, null, null);
+        Next= new Node(null, Pre, null);
+        Pre.next = Next;
+        size++;
+    }
     //进行replace的操作
     public void replace(int index,E e){
         Node temp=node(index);
@@ -167,7 +172,7 @@ public class  List<E>implements Iterable<E>,Comparable<E>{
 
         @Override
         public void remove() {
-
+            System.out.println("未实现");
         }
     }
 
